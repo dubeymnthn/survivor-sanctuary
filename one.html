@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Catalog</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        .course-container {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .unit {
+            margin-bottom: 15px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+        }
+
+        .unit:last-child {
+            border-bottom: none;
+        }
+
+        .subtopic {
+            font-weight: bold;
+            color: #333;
+            margin-top: 10px;
+        }
+
+        #course-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .course-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .course-card:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Course Catalog</h1>
+    <div id="course-list"></div>
+    <div id="course-details"></div>
+
+    <script>
+        // Sample JSON files (you would replace these with actual file paths)
+        const jsonFiles = [
+            { id: 1, path: 'courses/one.json' },
+            { id: 2, path: 'courses/two.json' },
+            { id: 3, path: 'courses/three.json' }
+        ];
+
+        // Function to fetch JSON files
+        async function fetchCourses() {
+            const courseList = document.getElementById('course-list');
+            courseList.innerHTML = ''; // Clear existing content
+
+            for (const file of jsonFiles) {
+                try {
+                    const response = await fetch(file.path);
+                    const course = await response.json();
+
+                    const courseCard = document.createElement('div');
+                    courseCard.className = 'course-card';
+                    courseCard.innerHTML = `
+                        <h2>${course.title}</h2>
+                        <p>${course.subtitle}</p>
+                    `;
+                    courseCard.onclick = () => displayCourseDetails(course);
+
+                    courseList.appendChild(courseCard);
+                } catch (error) {
+                    console.error('Error fetching course:', error);
+                }
+            }
+        }
+
+        // Function to display course details
+        function displayCourseDetails(course) {
+            const courseDetails = document.getElementById('course-details');
+            courseDetails.innerHTML = `
+                <div class="course-container">
+                    <h1>${course.title}</h1>
+                    <p>${course.subtitle}</p>
+                    ${course.content.map(unit => `
+                        <div class="unit">
+                            <h2>${unit.title}</h2>
+                            <p>${unit.subtitle}</p>
+                            ${unit.details.map(detail => `
+                                <div>
+                                    <div class="subtopic">${detail.subtopic}</div>
+                                    <p>${detail.description}</p>
+                                </div>
+                            `).join('')}
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+
+            // Update URL with course ID
+            history.pushState(null, '', `#course/${course.id}`);
+        }
+
+        // Handle URL changes
+        window.addEventListener('hashchange', () => {
+            const courseId = window.location.hash.split('/')[1];
+            if (courseId) {
+                const course = jsonFiles.find(f => f.id === parseInt(courseId));
+                if (course) {
+                    fetchCourseById(course.path);
+                }
+            }
+        });
+
+        // Fetch course by ID
+        async function fetchCourseById(path) {
+            try {
+                const response = await fetch(path);
+                const course = await response.json();
+                displayCourseDetails(course);
+            } catch (error) {
+                console.error('Error fetching course:', error);
+            }
+        }
+
+        // Initial load
+        fetchCourses();
+    </script>
+</body>
+
+</html>

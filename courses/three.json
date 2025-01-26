@@ -1,0 +1,145 @@
+{
+  "id": 3,
+  "title": "Shree",
+  "subtitle": "B.Com 1st Year, 2nd Semester",
+  "dataname": "national_post_graduate_college",
+  "content": [
+    {
+      "title": "Unit 1: Accounting Concepts",
+      "subtitle": "Detailed understanding of core accounting principles.",
+      "details": [
+        {
+          "subtopic": "Accrual vs. Cash Basis of Accounting",
+          "description": "Advanced accounting introduces accrual accounting, recognizing revenue when earned and expenses when incurred, providing a more accurate financial picture than cash basis."
+        },
+        {
+          "subtopic": "Consolidated Financial Statements",
+          "description": "Combines financial data of parent companies and subsidiaries to reflect the overall financial health of a corporate group."
+        },
+        {
+          "subtopic": "Branch Accounting",
+          "description": "Separate accounting records for branches to track their performance and reconcile with the main office accounts."
+        },
+        {
+          "subtopic": "Lease Accounting",
+          "description": "Differentiates between operating leases (rentals) and finance leases (similar to buying on credit), affecting how leases appear in financial statements."
+        },
+        {
+          "subtopic": "Intangible Assets",
+          "description": "Covers valuation, amortization, and impairment of non-physical assets like brands and patents."
+        },
+        {
+          "subtopic": "Inventory Valuation Methods",
+          "description": "Methods like FIFO, LIFO, and weighted average cost impact financial statements significantly."
+        },
+        {
+          "subtopic": "Cash Flow Statements",
+          "description": "Details cash inflows and outflows from operating, investing, and financing activities."
+        },
+        {
+          "subtopic": "Earnings per Share (EPS)",
+          "description": "Indicates company profitability by calculating the profit attributable to each outstanding share of common stock."
+        },
+        {
+          "subtopic": "Accounting for Business Combinations",
+          "description": "Deals with mergers, acquisitions, goodwill, and impairment testing."
+        },
+        {
+          "subtopic": "Partnership Accounting",
+          "description": "Covers profit-sharing ratios, partner capital accounts, and the dissolution process of partnerships."
+        }
+      ]
+    },
+    {
+      "title": "Unit 2: Accounting Conventions",
+      "subtitle": "Established principles ensuring consistency and reliability in financial reporting.",
+      "details": [
+        {
+          "subtopic": "Going Concern Convention",
+          "description": "Assumes a business will operate in the foreseeable future, impacting asset valuation."
+        },
+        {
+          "subtopic": "Matching Principle",
+          "description": "Aligns expenses with revenues of the same period for accurate profitability."
+        },
+        {
+          "subtopic": "Monetary Unit Assumption",
+          "description": "Uses a single currency for financial reporting to ensure clarity and comparability."
+        },
+        {
+          "subtopic": "Accrual Accounting",
+          "description": "Recognizes revenue and expenses when they occur, not when cash is exchanged."
+        },
+        {
+          "subtopic": "Consistency Principle",
+          "description": "Requires the use of consistent accounting methods for better comparison over time."
+        },
+        {
+          "subtopic": "Materiality Principle",
+          "description": "Focuses on disclosing only material information to avoid unnecessary details."
+        },
+        {
+          "subtopic": "Disclosure Principle",
+          "description": "Mandates transparency by disclosing relevant financial information."
+        },
+        {
+          "subtopic": "Conservatism Convention",
+          "description": "Prefers a cautious approach in uncertain situations to avoid overstating financial health."
+        }
+      ]
+    },
+    {
+      "title": "Unit 3: Postulates and Accounting Standards",
+      "subtitle": "Foundational assumptions and guidelines for uniformity.",
+      "details": [
+        {
+          "subtopic": "Accounting Postulates",
+          "description": "Includes going concern, monetary unit assumption, and accrual accounting."
+        },
+        {
+          "subtopic": "Accounting Standards",
+          "description": "Detailed guidelines like IFRS and GAAP that ensure comparability, reduce subjectivity, and align with regulatory requirements."
+        }
+      ]
+    },
+    {
+      "title": "Unit 4: IFRS – Meaning & Scope",
+      "subtitle": "Understanding global standards for financial reporting.",
+      "details": [
+        {
+          "subtopic": "Transparency and Comparability",
+          "description": "Promotes clear, comparable financial statements across countries."
+        },
+        {
+          "subtopic": "Revenue Recognition",
+          "description": "Defines how and when companies recognize revenue."
+        },
+        {
+          "subtopic": "Inventory Valuation",
+          "description": "Covers methods like FIFO and LIFO for inventory accounting."
+        },
+        {
+          "subtopic": "Property, Plant, and Equipment (PPE)",
+          "description": "Guidelines for tangible assets, including depreciation and valuation."
+        },
+        {
+          "subtopic": "Intangible Assets",
+          "description": "Addresses valuation, amortization, and impairment of intangible assets."
+        },
+        {
+          "subtopic": "Financial Instruments",
+          "description": "Covers accounting for derivatives, bonds, and share options."
+        },
+        {
+          "subtopic": "Financial Statement Presentation",
+          "description": "Standardizes the format and content of financial statements."
+        },
+        {
+          "subtopic": "Importance for Careers in Accounting",
+          "description": "Understanding IFRS equips professionals for global career opportunities and compliance."
+        }
+      ]
+    }
+  ],
+  "completed": true
+}
